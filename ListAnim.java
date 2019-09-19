@@ -6,6 +6,7 @@ import java.util.Collections;
 public class ListAnim {
 	public static void main(String[] args) {
 		// create arrayList
+		
 		List<String> myAnimals = new ArrayList<String>();
 		//adding element to the ArrayList
 		myAnimals.add("Eel");
@@ -15,24 +16,27 @@ public class ListAnim {
 		myAnimals.add("Lizard");
 		myAnimals.add("Ant");
 		//printing the list as it was
+		System.out.println("Q1:*************************");
 		int ize = myAnimals.size();
 		for(int i=0; i < ize; i++ ) {
+
 			System.out.println(myAnimals.get(i));
 			}
-		System.out.println("*************************");
+		System.out.println("Q2:*************************");
 ;
 		//printing reversed arrayList
-		Collections.reverse(myAnimals);
+		Collections.sort(myAnimals,Collections.reverseOrder());
 		for(int i=0; i < ize; i++ ) {
 			System.out.println(myAnimals.get(i));
 			}
-		System.out.println("*************************");
+		System.out.println("Q3:*************************");
 		//shuffling ArrayList
+		Collections.sort(myAnimals);
 		Collections.shuffle(myAnimals);
 		for(int i=0; i < ize; i++ ) {
 			System.out.println(myAnimals.get(i));
 			}
-		System.out.println("*************************");
+		System.out.println("Q4:*************************");
 
 		//create list of numbers
 		List<Integer> myNumlist = new ArrayList<Integer>();
@@ -50,6 +54,7 @@ public class ListAnim {
 			total += myNumlist.get(i);
 		}
 		//printing the total
+		//(C%2==0?"even":"odd")
 		System.out.println(total);
 		for(int i=0; i<Size; i++) {
 			int t= myNumlist.get(i);
@@ -63,12 +68,12 @@ public class ListAnim {
 			
 		}
 		//create arrayList myAnimal
-		System.out.println("*************************");
+		System.out.println("Q5:*************************");
 
 		String[]myAnimal = {"Eal", "Cat", "Dog", "Fish", "Lizard", "Ant"}; 
 		
 		for (int i=0 ; i < myAnimal.length; i++) {
-			//generate a random number index and prent the index, value of index and value of i
+			//generate a random number index and print the index, value of index and value of i
 			int index = (int)(Math.random() * myAnimal.length);
 			System.out.println(index + "\t" + myAnimal[index] + "\t"+ myAnimal[i]);
 			//create an empty String temp and use it to switch
@@ -80,6 +85,9 @@ public class ListAnim {
 			System.out.print(n+ " ");
 			}
 			System.out.println();
+			
+			Object test =1;
+			System.out.print(test.getClass().getName());
 		}
 		
 		}
