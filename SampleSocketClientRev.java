@@ -6,9 +6,9 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 
-public class SampleSocketClient {
+public class SampleSocketClientRev {
 	Socket server;
-	public SampleSocketClient() {
+	public SampleSocketClientRev() {
 		
 	}
 	//create a server socket and connect the client user ip address and a port number(IOException is used if anthing goes wrong)
@@ -34,7 +34,7 @@ public class SampleSocketClient {
 			String line = "";
 			while(true) {
 				try {
-					System.out.println("Waiting for input");
+					System.out.println("Please enter a message to send.........:");
 					line = si.nextLine();
 					if(!"quit".equalsIgnoreCase(line)) {
 						out.println(line);
@@ -46,7 +46,7 @@ public class SampleSocketClient {
 					String fromServer = in.readLine();
 					//display the response from the server. if not printout "server disconnected"
 					if(fromServer != null) {
-						System.out.println("Reply from server: " + fromServer);
+						System.out.println("Your message received and reveversed to you======>: " + fromServer);
 					}
 					else {
 						System.out.println("Server disconnected");
@@ -79,7 +79,7 @@ public class SampleSocketClient {
 		}
 	}
 	public static void main(String[] args) {
-		SampleSocketClient client = new SampleSocketClient();
+		SampleSocketClientRev client = new SampleSocketClientRev();
 		client.connect("127.0.0.1", 3500);
 		try {
 			//if start is private, it's valid here since this main is part of the class
