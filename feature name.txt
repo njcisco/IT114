@@ -1,0 +1,4 @@
+two reach features:
+
+1-send a message privately to a user using  @user
+2-change the color of the user pseudo name. 
